@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 
 import com.brqapirest.domain.entidade.Cliente;
 import com.brqapirest.domain.exception.NegocioException;
-import com.brqapirest.domain.repository.ClienteRepository;
 import com.brqapirest.domain.service.CadastroClienteService;
 
 @SpringBootTest
@@ -17,8 +16,6 @@ class BrqApirestApplicationTests {
 	@Autowired
 	private CadastroClienteService cadastroClienteService;
 
-	@Autowired
-	private ClienteRepository clienteRepository;
 
 	@Test
 	void contextLoads() {
@@ -44,7 +41,7 @@ class BrqApirestApplicationTests {
 		/**
 		 * Insere um cliente
 		 */
-		Cliente cliente = new Cliente("Maria Nunes", "123456", "74125896325",
+		Cliente cliente = new Cliente("Maria Nunes", "123456", "36945685298",
 				"Reua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade", "26/09/1945",
 				"Pedreiro", "113456788", "72998764563", "1", "maria.nunes@brq.com.br");
 		cliente = cadastroClienteService.salvarCliente(cliente);
@@ -59,7 +56,7 @@ class BrqApirestApplicationTests {
 		 * Limpa a base pra não deixar sujeira
 		 * 
 		 */
-		//cadastroClienteService.excluirCliente(cliente.getId());
+		cadastroClienteService.excluirCliente(cliente.getId());
 
 		Assertions.assertTrue(cadastroClienteService.CLIENT_FOUND.equals(clienteCadastrado.getStatusCode().name()));
 	}
@@ -73,11 +70,11 @@ class BrqApirestApplicationTests {
 		/**
 		 * Insere um cliente
 		 */
-		Cliente cliente1 = new Cliente("Maria Nunes", "123456", "74125896325",
+		Cliente cliente1 = new Cliente("Maria Nunes", "123456", "36945685298",
 				"Reua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade", "26/09/1945",
 				"Pedreiro", "113456788", "72998764563", "1", "maria.nunes@brq.com.br");
 
-		Cliente cliente2 = new Cliente("Leandro Alves Nunens", "123456", "74125896325",
+		Cliente cliente2 = new Cliente("Leandro Alves Nunens", "123456", "36945685298",
 				"Reua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade", "26/09/1945",
 				"Pedreiro", "113456788", "72998764563", "1", "leandro.nunes@brq.com.br");
 
