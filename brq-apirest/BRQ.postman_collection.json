@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "a9c08d77-ccfc-4694-be70-689fa6e0503a",
+		"name": "BRQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BRQ - Cadastrar Cliente",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Maria Nunes\",\r\n    \"rg\": \"123456\",\r\n    \"cpf\": \"74125896325\",\r\n    \"email\": \"maria.nunes@brq.com.br\",\r\n    \"dataNascimento\": \"26/09/1945\",\r\n    \"profissao\": \"Pedreiro\",\r\n    \"endereco\": \"Reua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade\",\r\n    \"telFixo\": \"113456788\",\r\n    \"celular\": \"72998764563\",\r\n    \"isCelularZap\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/clientes/",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRQ - Alterar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Adega da Cerveja - Pinheiros\",\r\n\t\t\"rg\": \"123456\",\r\n\t\t\"cpf\": \"74125356325\",\r\n\t\t\"endereco\": \"Rua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade\",\r\n\t\t\"dataNascimento\": \"26/09/1945\",\r\n\t\t\"profissao\": \"Pedreiro\",\r\n\t\t\"telFixo\": \"113456788\",\r\n\t\t\"celular\": \"72998764563\",\r\n\t\t\"isCelularZap\": \"1\",\r\n\t\t\"email\": \"maria.nunes@brq.com.br\"\r\n\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/clientes/23",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRQ - Busca Todos os  clientes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8089/clientes/",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRQ - Busca Cliente Por Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8089/clientes/21",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRQ - Deleta Cliente Por Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Maria Nunes\",\r\n    \"rg\": \"123456\",\r\n    \"cpf\": \"74125896325\",\r\n    \"email\": \"maria.nunes@brq.com.br\",\r\n    \"dataNascimento\": \"26/09/1945\",\r\n    \"profissao\": \"Pedreiro\",\r\n    \"endereco\": \"Reua Fernando Pinto, praca de repulblica cep 87654-389 N° 33 bairro Liberdade\",\r\n    \"telFixo\": \"113456788\",\r\n    \"celular\": \"72998764563\",\r\n    \"isCelularZap\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/clientes/19",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"clientes",
+						"19"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
